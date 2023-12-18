@@ -6,14 +6,22 @@ const keyInput = document.querySelector("#key");
 
 encodeButton.addEventListener("click", () => {
   let keyValue = Number(keyInput.value);
-  shift(keyValue);
-  textResult.value = encodeFunc(textInput.value);
+  if (keyValue < 0) {
+    textResult.value = "Please enter a positive number";
+  } else {
+    shift(keyValue);
+    textResult.value = encodeFunc(textInput.value);
+  }
 });
 
 decodeButton.addEventListener("click", () => {
   let keyValue = Number(keyInput.value);
-  shift(keyValue);
-  textResult.value = decodeFunc(textInput.value);
+  if (keyValue < 0) {
+    textResult.value = "Please enter a positive number";
+  } else {
+    shift(keyValue);
+    textResult.value = decodeFunc(textInput.value);
+  }
 });
 
 // Start of the cipher code
