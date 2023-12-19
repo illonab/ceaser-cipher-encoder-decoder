@@ -10,8 +10,8 @@ const initUI = () => {
     if (keyValue < 0) {
       textResult.value = "Please enter a positive number";
     } else {
-      newalpha = shift(keyValue);
-      textResult.value = encodeFunc(textInput.value);
+      const newalpha = shift(keyValue);
+      textResult.value = encodeFunc(textInput.value, newalpha);
     }
   });
 
@@ -20,8 +20,8 @@ const initUI = () => {
     if (keyValue < 0) {
       textResult.value = "Please enter a positive number";
     } else {
-      newalpha = shift(keyValue);
-      textResult.value = decodeFunc(textInput.value);
+      const newalpha = shift(keyValue);
+      textResult.value = decodeFunc(textInput.value, newalpha);
     }
   });
 };
@@ -29,7 +29,6 @@ const initUI = () => {
 // Start of the cipher code
 const alphabet =
   "abcdefghijklmnopqrstuvwxyz!#$%&'()*+-./:;<=>?@[\\]^_{|}~ 1234567890\""; // Create a new variable that holds the alphabet
-let newalpha = ""; // Create another variable for a new alphabet and keep it empty
 
 // The shift function takes an integer n and creates a shifted alphabet (newalpha).
 // It uses a loop to iterate over each character in the original alphabet,
@@ -48,7 +47,7 @@ function shift(n) {
 // It converts each character to lowercase, checks if it's in the original alphabet, finds its index,
 // and replaces it with the corresponding character from the shifted alphabet. Non-alphabetic characters remain unchanged.
 
-function encodeFunc(message) {
+function encodeFunc(message, newalpha) {
   let result = "";
   message = message.toLowerCase();
   for (let i = 0; i < message.length; i++) {
@@ -65,7 +64,7 @@ function encodeFunc(message) {
 // and replacing it with the corresponding character from the original alphabet.
 // Non-alphabetic characters remain unchanged.
 
-function decodeFunc(message) {
+function decodeFunc(message, newalpha) {
   let result = "";
   message = message.toLowerCase();
   for (let i = 0; i < message.length; i++) {

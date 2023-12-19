@@ -24,6 +24,10 @@ test("Should retun empty string if passed an empty string", () => {
   expect(encodeFunc("")).toBe("");
 });
 
+test("Should return ecoded message when passed a simple string", () => {
+  expect(encodeFunc("abc", shift(1))).toBe("bcd");
+});
+
 // describe('encodeFunc function', () => {
 //     it('should return original alphabet if 0 is passed', () => {
 //       // Set up the initial state
