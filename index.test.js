@@ -24,7 +24,7 @@ test("Should retun empty string if passed an empty string", () => {
   expect(encodeFunc("")).toBe("");
 });
 
-test("Should return ecoded message when passed a simple string", () => {
+test("Should return encoded message when passed a simple string.", () => {
   expect(encodeFunc("abc", shift(1))).toBe("bcd");
 });
 
