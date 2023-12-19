@@ -2,23 +2,61 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ceaser Cipher Encoder/Decoder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        @layer utilities {
+            body {
+                font-family: "Ubuntu", sans-serif;
+            }
+        }
+    </style>
 </head>
 
-<body>
-    <main id="main">
-        <h1>Ceaser Cipher Encoder/Decoder</h1>
-        <div id="app">
-            <div id="text">
-                <textarea name="" id="textInput" cols="30" rows="10" placeholder="Enter your text here"></textarea>
-                <textarea name="" id="textResult" cols="30" rows="10"></textarea>
+<body class="bg-orange-200">
+    <main id="main" class="p-4">
+        <h1 class="font-bold text-3xl mb-4 text-center mt-4 text-orange-900">
+            Ceaser Cipher Encoder/Decoder
+        </h1>
+        <div class="flex flex-col lg:flex-row items-center justify-center">
+            <div class="mb-4 lg:mb-0 lg:mr-8">
+                <h2 class="font-bold text-orange-900 text-center mb-2">
+                    Input Field:
+                </h2>
+                <textarea name="input" class="border border-black border-2 border-orange-700 bg-white w-full lg:w-96"
+                    id="textInput" cols="30" rows="10" placeholder="Enter your text here"></textarea>
             </div>
-            <div class="buttons">
-                <button type="button" id="encode">Encode</button>
-                <input type="text" id="key" placeholder="key">
-                <button type="button" id="decode">Decode</button>
+            <div>
+                <h2 class="font-bold text-orange-900 text-center mb-2">
+                    Output Field:
+                </h2>
+                <textarea name="result" class="border border-black border-2 border-orange-700 bg-white w-full lg:w-96"
+                    id="textResult" cols="30" rows="10" placeholder="Result"></textarea>
+            </div>
+        </div>
+        <div id="app" class="mt-4">
+            <div class="flex flex-col lg:flex-row items-center justify-center">
+                <div class="mb-4 lg:mb-0">
+                    <button type="button" id="encode"
+                        class="border border-black bg-yellow-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full lg:w-auto">
+                        Encode
+                    </button>
+                </div>
+                <div class="mb-4 lg:mb-0 lg:mx-4">
+                    <input type="text" class="border border-black bg-white h-12 lg:w-24 lg:h-[40px] px-2" id="key"
+                        placeholder="Key" />
+                </div>
+                <div>
+                    <button type="button" id="decode"
+                        class="border border-black bg-orange-800 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full lg:w-auto">
+                        Decode
+                    </button>
+                </div>
             </div>
         </div>
     </main>
