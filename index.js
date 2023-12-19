@@ -78,6 +78,7 @@ function decodeFunc(message, newalpha) {
 }
 
 //Export functions for Node.js or initialize UI for the browser
+//There are no document, window in Node.js, so we are isolating this part of the logic
 if (typeof module !== "undefined") {
   module.exports = {
     shift,

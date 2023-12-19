@@ -28,21 +28,10 @@ test("Should return encoded message when passed a simple string.", () => {
   expect(encodeFunc("abc", shift(1))).toBe("bcd");
 });
 
-// describe('encodeFunc function', () => {
-//     it('should return original alphabet if 0 is passed', () => {
-//       // Set up the initial state
-//       const originalInput = 'hello';
-//       const key = 0;
-
-//       // Trigger the encode function
-//       shift(key);
-//       const result = encodeFunc(originalInput);
-
-//       // Check the result
-//       expect(result).toBe(originalInput);
-//     });
-
-//   });
+// decodeFunc testing
+test("Should return decoded message when passed a simple string.", () => {
+  expect(decodeFunc("cggj", shift(1000))).toBe("hllo");
+});
 
 // test("return true if the decode function is passed", () => {
 //   // Create a mock function to replace the original function
