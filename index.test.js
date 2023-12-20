@@ -32,12 +32,3 @@ test("Should return encoded message when passed a simple string.", () => {
 test("Should return decoded message when passed a simple string.", () => {
   expect(decodeFunc("cggj", shift(1000))).toBe("hllo");
 });
-
-// test("return true if the decode function is passed", () => {
-//   // Create a mock function to replace the original function
-//   const mockFunc = jest.fn();
-//   // Call the function with a valid condition
-//   decodeFunc(true);
-//   // Test if the function was called with the right condition
-//   expect(mockFunc).toHaveBeenCalledWith(true);
-// });
